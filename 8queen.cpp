@@ -1,6 +1,6 @@
 #include <iostream>
-#define BOUNDED(x,y) x >= 0 && x < 8 && y >= 0 && y < 8 
 #include <stdlib.h>
+#define BOUNDED(x,y) x >= 0 && x < 8 && y >= 0 && y < 8 
 
 using namespace std;
 
@@ -10,12 +10,10 @@ void printboard() {
 	for (int i = 0; i < 8; ++i)
 	{
 		for (int j = 0; j < 8; ++j)
-		{
 			if (chessboard[i][j]==0 || chessboard[i][j]==-1)
 				cout<<"0 ";
 			else
 				cout<<"1 ";
-		}
 		cout<<endl;
 	}
 }
@@ -53,9 +51,7 @@ void placeCoin(int ncoins) {
 
 	if(ncoins) {
 		for (i = 0; i < 8; ++i)
-		{
 			for (j = 0; j < 8; ++j)
-			{
 				if (chessboard[i][j]==0 && !placed[i][j])
 				{
 					placeCoinAt(i,j);
@@ -64,8 +60,6 @@ void placeCoin(int ncoins) {
 					ncoins++;
 					removeCoinAt(i,j);
 				}
-			}
-		}
 	}	
 	else {
 		printboard();
