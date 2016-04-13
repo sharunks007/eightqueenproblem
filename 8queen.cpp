@@ -12,9 +12,7 @@ void printboard() {
 		for (int j = 0; j < 8; ++j)
 		{
 			if (chessboard[i][j]==0 || chessboard[i][j]==-1)
-			{
 				cout<<"0 ";
-			}
 			else
 				cout<<"1 ";
 		}
@@ -37,21 +35,13 @@ void removeCoinAt(int i,int j) {
 	int k,l;
 	chessboard[i][j]=0;
 	for (int i = 0; i < 8; ++i)
-	{
 		for (int j = 0; j < 8; ++j)
-		{
 			if(chessboard[i][j]==-1)
 				chessboard[i][j]=0;
-		}
-	}
 	for (int i = 0; i < 8; ++i)
-	{
 		for (int j = 0; j < 8; ++j)
-		{
 			if(chessboard[i][j]==1)
 				placeCoinAt(i,j);
-		}
-	}
 }
 
 void placeCoin(int ncoins) {
